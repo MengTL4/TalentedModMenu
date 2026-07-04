@@ -17,6 +17,7 @@ namespace Talented
         public static bool ForceAutoAimEnabled = true;
         public static int TalentMultiplier = 1;
         public static bool DlcUnlockEnabled = true;
+        private static bool autoAimOverrideApplied;
 
         void Start()
         {
@@ -61,24 +62,33 @@ namespace Talented
             GUI.DragWindow(new Rect(0, 0, 10000, 20));
         }
 
-        [HarmonyPostfix, HarmonyPatch(typeof(InputManager), "Update")]
-        public static void ForceAutoAim(InputManager __instance)
+        [HarmonyPrefix, HarmonyPatch(typeof(InputManager), "Update")]
+        public static void ForceAutoAimBeforeUpdate(InputManager __instance)
         {
-            if (!ForceAutoAimEnabled)
+            ApplyAutoAimOverride(__instance);
+        }
+
+        [HarmonyPostfix, HarmonyPatch(typeof(InputManager), "Update")]
+        public static void ForceAutoAimAfterUpdate(InputManager __instance)
+        {
+            ApplyAutoAimOverride(__instance);
+        }
+
+        private static void ApplyAutoAimOverride(InputManager inputManager)
+        {
+            if (inputManager == null) return;
+
+            if (ForceAutoAimEnabled)
             {
-                __instance.AutoAimEnabled = false;
+                inputManager.SpecialAutoAimEnabled = true;
+                inputManager.DirectionalInputDisabled = false;
+                autoAimOverrideApplied = true;
             }
-            else
+            else if (autoAimOverrideApplied)
             {
-                // 始终开启自动瞄准
-                if (!__instance.AutoAimEnabled)
-                    __instance.AutoAimEnabled = true;
-
-                // 防止被技能或其他逻辑禁用方向输入
-                __instance.DirectionalInputDisabled = false;
+                inputManager.SpecialAutoAimEnabled = false;
+                autoAimOverrideApplied = false;
             }
-
-
         }
 
         [HarmonyPrefix, HarmonyPatch(typeof(RunManager), "get_TalentPointsRemaining")]

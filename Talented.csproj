@@ -32,52 +32,52 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\BepInEx\core\0Harmony.dll</HintPath>
+      <HintPath>..\BepInEx\core\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\Talented_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>..\BepInEx\core\BepInEx.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BepInEx.Harmony">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+      <HintPath>..\BepInEx\core\BepInEx.Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System">
-      <HintPath>..\..\..\Steam\steamapps\common\降妖散记\降妖散记_Data\Managed\System.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\System.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\Steam\steamapps\common\降妖散记\降妖散记_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\Talented_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\Talented_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\Steam\steamapps\common\降妖散记\降妖散记_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>..\..\..\Steam\steamapps\common\降妖散记\降妖散记_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.InputModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\Talented_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>F:\SteamLibrary\steamapps\common\Talented\Talented_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\Talented_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
